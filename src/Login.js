@@ -5,7 +5,19 @@ function Login() {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
-    alert(`Logging in with ${email}`);
+    if (!email || !password) {
+      alert("Please fill in all fields!");
+      return;
+    }
+    if (!email.endsWith(".edu")) {
+      alert("Only institutional .edu emails are allowed!");
+      return;
+    }
+    if (password.length < 6) {
+      alert("Password must be at least 6 characters!");
+      return;
+    }
+    window.location.href = "/dashboard";
   };
 
   return (

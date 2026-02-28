@@ -27,7 +27,7 @@ function PostDetail() {
       <p><strong>Location:</strong> {post.city}, {post.country}</p>
       <p><strong>Confidentiality:</strong> {post.confidentiality === "public" ? "Public Pitch" : "Details in Meeting Only"}</p>
       <br/>
-      <button style={{ padding: "10px 20px", backgroundColor: "#007bff", color: "white", border: "none", borderRadius: "5px" }}>
+      <button onClick={() => window.location.href="/meeting-request"} style={{ padding: "10px 20px", backgroundColor: "#007bff", color: "white", border: "none", borderRadius: "5px" }}>
         Request Meeting
       </button>
     </div>
